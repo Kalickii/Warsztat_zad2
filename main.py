@@ -22,3 +22,17 @@ while len(guess) < 6:
             guess.append(user_number)
     except ValueError:
         print("Please enter only numbers!")
+
+print(sorted(guess))
+print(lotto)
+
+for i in guess:
+    if i in lotto:
+        guessed_numbers += 1
+
+print(f"You guessed {guessed_numbers} numbers!")
+
+if guessed_numbers > 2:
+    print("You win!")
+else:
+    print("You lose!")
